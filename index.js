@@ -1,9 +1,16 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  let re = /[^A-Za-z0-9]/g;
+  let lowWord = word.toLowerCase().replace(re, '')
+  let reverseWord = lowWord.split('').reverse().join('')
+  return lowWord === reverseWord
 }
 
 /* 
-  Add your pseudocode here
+  function declaration
+  if word is === to palindrome
+    return true
+    else
+    return false
 */
 
 /*
